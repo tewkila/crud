@@ -32,15 +32,9 @@
 include('settings/db.php');
 $con = new database();
 
-$brand = "";
-$model = "";
-$date = "";
-$color = "";
-$petrol = "";
-$power = "";
-$id = 0;
-$type_id = 0;
-
+//ცარიელი ცვლადები
+include('settings/empty_var.php');
+$empt = new emptyvar();
 
 //შენახვა
 if (isset($_POST['save'])) {

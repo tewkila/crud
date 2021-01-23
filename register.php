@@ -1,13 +1,13 @@
  <?php
  @session_start();
- include('settings/db.php');
+ 
+//კავშრი
+include('settings/db.php');
 $con = new database();
 
-$name = "";
-$mail = "";
-$password = "";
-$password1 = "";
-$id = "";
+//ცარიელი ცვლადები
+include('settings/empty_var.php');
+$empt = new emptyvar();
 ?>
 
 <!DOCTYPE html>

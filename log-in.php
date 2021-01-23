@@ -7,7 +7,6 @@ if(isset($_POST['log-in'])){
     $pass = md5(htmlspecialchars($_POST['password']));
     $sql = "SELECT `name` FROM `admin` WHERE `mail` = '$email' AND `password` = '$pass'";
     $result = $con->db->query($sql);
-    
     if (isset($result->num_rows) && $result->num_rows > 0) {
         while($row = $result->fetch_assoc()) 
         {
