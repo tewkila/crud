@@ -1,0 +1,136 @@
+body {
+background-color: #ECF0F3;
+}
+
+.logo {
+text-decoration: none;
+}
+
+.logo h2 {
+position: absolute;
+top: 27px;
+left: 97px;
+width: 114px;
+height: 67px;
+text-align: left;
+letter-spacing: NaNpx;
+color: #EF9C2E;
+opacity: 1;
+font-weight: 700;
+z-index: 1;
+font-family: aileron;
+font-size: 40px;
+}
+
+.arrow_btn {
+position: absolute;
+left: 1300px;
+top: 30px;
+width: 60px;
+height: 50px;
+background: transparent;
+}
+
+
+h1 {
+position: absolute;
+top: 250px;
+left: 940px;
+width: 450px;
+height: 400px;
+text-align: left;
+font: normal normal bold 50px/61px Aileron;
+letter-spacing: 0px;
+color: #404044;
+text-transform: lowercase;
+opacity: 1;
+}
+
+.title-log-in {
+position: absolute;
+left: 590px;
+bottom: 430px;
+font-family: Aileron;
+font-weight: bold;
+font-size: 70px;
+text-align: left;
+color: #404044;
+}
+
+form {
+position: absolute;
+left: 520px;
+bottom: 80px;
+}
+
+
+.input-group-mine {
+padding-bottom: 18px;
+}
+
+.input-group-mine input {
+height: 60px;
+width: 400px;
+border-radius: 40px;
+border: transparent;
+background-color: #ECF0F3 ;
+box-shadow: inset 3px 3px 6px #a1aab9, inset -8px -8px 16px #fff;
+}
+
+.input-group-mine input:focus {
+outline: none;
+font-size: 17px;
+padding: 3px;
+}
+
+input[type="text" i] {
+font-family: aileron;
+font-size: 17px;
+padding-left: 10px;
+}
+
+::placeholder {
+font-family: aileron;
+font-size: 17px;
+padding: 10px;
+}
+
+::-webkit-datetime-edit {
+font-family: aileron;
+font-size: 17px;
+padding: 10px;
+color: gray;
+}
+
+::-webkit-calendar-picker-indicator {
+color: gray;
+padding-right: 10px;
+}
+
+.btn {
+width: 106px;
+height: 42px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: -15px -15px 25px #fff, 15px 15px 25px #d1d9e6;
+outline: none;
+border: none;
+}
+
+
+.btn:hover {
+color: #EF9C2E;
+}
+
+.already {
+position: absolute;
+bottom: 35px;
+left: 180px;
+font-size: 15px;
+color: gray;
+font-family: aileron;
+}
+
+.already:hover {
+color: #000;
+}

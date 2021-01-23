@@ -1,0 +1,158 @@
+body {
+background-color: #ECF0F3;
+}
+
+.logo {
+text-decoration: none;
+}
+
+.logo h2 {
+position: absolute;
+top: 27px;
+left: 97px;
+width: 114px;
+height: 67px;
+text-align: left;
+letter-spacing: NaNpx;
+color: #EF9C2E;
+opacity: 1;
+font-weight: 700;
+z-index: 1;
+}
+
+.base {
+position: absolute;
+top: 50px;
+left: 1100px;
+width: 106px;
+height: 42px;
+background: #ECF0F3 0% 0% no-repeat padding-box;
+border-radius: 21px;
+}
+
+.admin_btn {
+text-decoration: none;
+}
+
+.base {
+width: 106px;
+height: 42px;
+border-radius: 21px;
+background: #ecf0f3;
+}
+
+.light {    
+width: 106px;
+height: 42px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: -15px -15px 25px #fff;
+}
+
+.shadow {
+background: #ECF0F3 0% 0% no-repeat padding-box;
+border-radius: 21px;
+width: 106px;
+height: 42px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: 15px 15px 25px #d1d9e6;
+}
+
+.light p {
+position: absolute;
+top: 10px;
+left: 27px;
+width: 52px;
+height: 22px;
+text-align: left;
+font: normal normal 300 19px/22px Aileron;
+letter-spacing: 0px;
+color: #42342B;
+opacity: 1;
+}
+
+h1 {
+position: absolute;
+top: 250px;
+left: 940px;
+width: 450px;
+height: 400px;
+text-align: left;
+font: normal normal bold 50px/61px Aileron;
+letter-spacing: 0px;
+color: #404044;
+text-transform: lowercase;
+opacity: 1;
+}
+
+
+.cars-list {
+position: relative;
+top: 100px;
+left: 70px;
+width: 164px;
+height: 226px;
+}
+
+.base-cars-list {
+width: 740px;
+height: 500px;
+border-radius: 21px;
+background: #ecf0f3;
+}
+
+.shadow-cars-list {
+width: 740px;
+height: 500px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: 40px 40px 85px #d1d9e6;
+z-index: 2;
+}
+
+.light-cars-list {
+width: 740px;
+height: 500px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: -40px -30px 85px #fff;
+overflow-y: auto;
+}
+
+
+.light-cars-list::-webkit-scrollbar {
+background-color: transparent;
+}
+
+.light-cars-list::-webkit-scrollbar-thumb {
+background-color: rgba(239, 156, 46, 0.5);
+border-radius: 10px;
+}
+
+.light-cars-list th{
+font-family: Aileron;
+font-weight: 900;
+font-size: 26px;
+text-align: left;
+color: #404044;
+padding-left: 45px;
+padding-top: 15px;
+}
+
+
+.td-list tr {
+width: 926px;
+height: 40px;
+background: transparent;
+}
+
+.td-list td {
+font-family: Aileron;
+font-weight: 300;
+font-size: 22px;
+text-align: left;
+padding-left: 45px;
+padding-right: 20px;
+color: #404044;
+}

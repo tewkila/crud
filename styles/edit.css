@@ -1,0 +1,256 @@
+body {
+background-color: #ECF0F3;
+}
+
+.logo {
+text-decoration: none;
+}
+
+.logo h2 {
+position: absolute;
+top: 27px;
+left: 97px;
+width: 114px;
+height: 67px;
+text-align: left;
+letter-spacing: NaNpx;
+color: #EF9C2E;
+opacity: 1;
+font-weight: 700;
+z-index: 1;
+font-family: aileron;
+font-size: 40px;
+}
+
+.arrow_btn {
+position: absolute;
+left: 1300px;
+top: 30px;
+width: 60px;
+height: 50px;
+background: transparent;
+}
+
+.base {
+position: absolute;
+top: 50px;
+left: 1100px;
+width: 106px;
+height: 42px;
+background: #ECF0F3 0% 0% no-repeat padding-box;
+border-radius: 21px;
+}
+
+.admin_btn {
+text-decoration: none;
+}
+
+.base {
+width: 106px;
+height: 42px;
+border-radius: 21px;
+background: #ecf0f3;
+}
+
+.light {    
+width: 106px;
+height: 42px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: -15px -15px 25px #fff;
+}
+
+.shadow {
+background: #ECF0F3 0% 0% no-repeat padding-box;
+border-radius: 21px;
+width: 106px;
+height: 42px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: 15px 15px 25px #d1d9e6;
+}
+
+.light p {
+position: absolute;
+top: 10px;
+left: 27px;
+width: 52px;
+height: 22px;
+text-align: left;
+font: normal normal 300 19px/22px Aileron;
+letter-spacing: 0px;
+color: #42342B;
+opacity: 1;
+}
+
+h1 {
+position: absolute;
+top: 250px;
+left: 940px;
+width: 450px;
+height: 400px;
+text-align: left;
+font: normal normal bold 50px/61px Aileron;
+letter-spacing: 0px;
+color: #404044;
+text-transform: lowercase;
+opacity: 1;
+}
+
+
+.cars-list {
+position: relative;
+top: 120px;
+left: 100px;
+width: 164px;
+height: 226px;
+}
+
+.base-cars-list {
+width: 1150px;
+height: 500px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: 40px 40px 85px #d1d9e6, -40px -30px 85px #fff;
+}
+
+.shadow-cars-list {
+width: 1150px;
+height: 500px;
+border-radius: 21px;
+background: #ecf0f3;
+z-index: 2;
+}
+
+.light-cars-list {
+width: 1150px;
+height: 500px;
+border-radius: 21px;
+background: #ecf0f3;
+overflow-y: auto;
+}
+
+.light-cars-list::-webkit-scrollbar {
+background-color: transparent;
+}
+
+.light-cars-list::-webkit-scrollbar-thumb {
+background-color: rgba(239, 156, 46, 0.5);
+border-radius: 10px;
+}
+
+.light-cars-list th{
+font-family: Aileron;
+font-weight: 900;
+font-size: 26px;
+text-align: left;
+color: #404044;
+padding-left: 80px;
+padding-top: 15px;
+}
+
+
+.td-list tr {
+width: 926px;
+height: 40px;
+background: transparent;
+}
+
+.td-list td {
+font-family: Aileron;
+font-weight: 300;
+font-size: 22px;
+text-align: left;
+padding-left: 85px;
+padding-right: 20px;
+color: #404044;
+}
+
+.delete_btn {
+color: #EF9C2E;
+padding: 8px;
+}
+
+.editt_btn {
+color: #EF9C2E;
+padding: 8px;
+outline: none;
+border: none;
+}
+
+.delete_btn:hover {
+color: #EF9C2E;
+}
+
+.editt_btn:hover {
+color: #EF9C2E;
+}
+
+.editt_btn:focus {
+outline: none;
+border: none;
+}
+
+form {
+position: relative;
+left: 65px;
+bottom: 20px;
+}
+
+
+.input-group-mine {
+padding-bottom: 18px;
+}
+
+.input-group-mine input {
+height: 50px;
+width: 300px;
+border-radius: 40px;
+border: transparent;
+background-color: #ECF0F3 ;
+box-shadow: inset 3px 3px 6px #a1aab9, inset -8px -8px 16px #fff;
+}
+.input-group-mine input:focus {
+outline: none;
+font-size: 17px;
+padding: 3px;
+}
+
+input[type="text" i] {
+font-family: aileron;
+font-size: 17px;
+padding-left: 10px;
+}
+
+::placeholder {
+font-family: aileron;
+font-size: 17px;
+padding: 10px;
+}
+
+::-webkit-datetime-edit {
+font-family: aileron;
+font-size: 17px;
+padding: 10px;
+color: gray;
+}
+
+::-webkit-calendar-picker-indicator {
+color: gray;
+padding-right: 10px;
+}
+
+.btn {
+width: 106px;
+height: 42px;
+border-radius: 21px;
+background: #ecf0f3;
+box-shadow: -15px -15px 25px #fff, 15px 15px 25px #d1d9e6;
+outline: none;
+border: none;
+}
+
+.btn:hover {
+color: #EF9C2E;
+}
+

@@ -1,0 +1,133 @@
+body {
+background-color: #ECF0F3;
+}
+
+.logo {
+text-decoration: none;
+}
+
+.logo h2 {
+position: absolute;
+top: 27px;
+left: 97px;
+width: 114px;
+height: 67px;
+text-align: left;
+letter-spacing: NaNpx;
+color: #EF9C2E;
+opacity: 1;
+font-weight: 700;
+z-index: 1;
+}
+
+.arrow_btn {
+position: absolute;
+left: 1300px;
+top: 30px;
+width: 60px;
+height: 50px;
+background: transparent;
+
+}
+
+.create_btn {
+text-decoration: none;
+}
+
+.create_btn .base {
+position: absolute;
+top: 300px;
+left: 650px;
+width: 275px;
+height: 109px;
+background: #ECF0F3 0% 0% no-repeat padding-box;
+border-radius: 44px;
+}
+
+.create_btn .light {    
+width: 275px;
+height: 109px;
+border-radius: 44px;
+background: #ecf0f3;
+box-shadow: -15px -15px 25px #fff;
+}
+
+.create_btn .shadow {
+background: #ECF0F3 0% 0% no-repeat padding-box;
+border-radius: 44px;
+width: 275px;
+height: 109px;
+background: #ecf0f3;
+box-shadow: 15px 15px 25px #d1d9e6;
+}
+
+.create_btn .light p {
+position: absolute;
+top: 40px;
+left: 75px;
+width: 52px;
+height: 22px;
+text-align: left;
+font: normal normal 700 47px/22px Aileron;
+letter-spacing: 0px;
+color: #42342B;
+opacity: 1;
+
+}
+
+
+.edit_btn {
+text-decoration: none;
+}
+
+.edit_btn .base {
+position: absolute;
+top: 300px;
+left: 300px;
+width: 275px;
+height: 109px;
+background: #ECF0F3 0% 0% no-repeat padding-box;
+border-radius: 60px;
+}
+
+.edit_btn .light {    
+width: 275px;
+height: 109px;
+border-radius: 60px;
+background: #ecf0f3;
+box-shadow: -15px -15px 25px #fff;
+}
+
+.edit_btn .shadow {
+background: #ECF0F3 0% 0% no-repeat padding-box;
+border-radius: 60px;
+width: 275px;
+height: 109px;
+background: #ecf0f3;
+box-shadow: 15px 15px 25px #d1d9e6;
+}
+
+.edit_btn .light p {
+position: absolute;
+top: 40px;
+left: 95px;
+width: 52px;
+height: 22px;
+text-align: left;
+font: normal normal 700 47px/22px Aileron;
+letter-spacing: 0px;
+color: #42342B;
+opacity: 1;
+
+}
+
+.log-out {
+position: absolute;
+color: gray;
+top: 40px;
+left: 1200px;
+}
+
+.log-out:hover {
+    color: #EF9C2E;
+    }
