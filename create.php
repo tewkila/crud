@@ -33,8 +33,19 @@ include('settings/db.php');
 $con = new database();
 
 //ცარიელი ცვლადები
-include('settings/empty_var.php');
-$empt = new emptyvar();
+$brand = "";
+$model = "";
+$date = "";
+$color = "";
+$petrol = "";
+$power = "";
+$id = 0;
+$type_id = 0;
+$update = false;
+$name = "";
+$mail = "";
+$password = "";
+$password1 = "";
 
 //შენახვა
 if (isset($_POST['save'])) {
@@ -51,9 +62,11 @@ if (isset($_POST['save'])) {
 
 $sql = "SELECT * ,info.id as info_id, type.id as info_type_id  FROM `info` INNER JOIN `type` ON info.id=type.type_id";
 $result =  $con->db->query($sql);
+
 if ($result->num_rows > 0) {
 while($row = $result->fetch_assoc())  
 { ?> 
+
 
 <table class="td-list">
 <tr>  

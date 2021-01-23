@@ -31,7 +31,7 @@
         </table>    
 <?php
 //კავშირი
-include('settings/db.php');
+require_once('settings/db.php');
 $con = new database();
 
 //ცარიელი ცვლადები
@@ -52,16 +52,18 @@ if (isset($_GET['delete'])) {
     }
 
 // რედაქტირება 
-include('settings/redact.php');
-$redct = new redaqtireba();
+require_once('settings/redact.php');
+$redct = new redact();
 
 
-
-$sql = "SELECT * ,info.id as info_id, type.id as info_type_id  FROM `info` INNER JOIN `type` ON info.id=type.type_id";
-$result =  $con->db->query($sql);
-if ($result->num_rows > 0) {
-while($row = $result->fetch_assoc())  
-{ ?> 
+require_once('settings/empty_var.php');
+$result = new emptyvar();
+$result->selectRow();
+// $sql = "SELECT * ,info.id as info_id, type.id as info_type_id  FROM `info` INNER JOIN `type` ON info.id=type.type_id";
+// $result =  $con->db->query($sql);
+if ( count($result->data) > 0) {
+  foreach ($result->data as $row){
+ ?> 
 
 <table class="td-list">
 <tr>  

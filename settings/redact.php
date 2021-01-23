@@ -1,5 +1,5 @@
 <?php
-class redaqtireba {
+class redact {
     public $empty;
     function __construct() {
         if (isset($_GET['edit'])) {

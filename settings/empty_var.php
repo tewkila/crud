@@ -1,20 +1,20 @@
 <?php
-class emptyvar {
-    public $empty;
+require_once('db.php');
+
+class emptyvar extends database {
+   public $data = array();
     function __construct() {
-        $brand = "";
-        $model = "";
-        $date = "";
-        $color = "";
-        $petrol = "";
-        $power = "";
-        $id = 0;
-        $type_id = 0;
-        $update = false;
-        $name = "";
-        $mail = "";
-        $password = "";
-        $password1 = "";
+
+        parent::__construct();
+        
+        }
+
+        public function selectRow(){
+            $sql = $this->db->query("SELECT * ,info.id as info_id, type.id as info_type_id  FROM `info` INNER JOIN `type` ON info.id=type.type_id");
+            $result = $sql->fetch_assoc();
+            while($row =  $sql->fetch_assoc())  {
+                $this->data[] = $row;
+            }
         }
     }
 ?>

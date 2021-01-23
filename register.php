@@ -6,8 +6,19 @@ include('settings/db.php');
 $con = new database();
 
 //ცარიელი ცვლადები
-include('settings/empty_var.php');
-$empt = new emptyvar();
+$brand = "";
+$model = "";
+$date = "";
+$color = "";
+$petrol = "";
+$power = "";
+$id = 0;
+$type_id = 0;
+$update = false;
+$name = "";
+$mail = "";
+$password = "";
+$password1 = "";
 ?>
 
 <!DOCTYPE html>
