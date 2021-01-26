@@ -1,5 +1,8 @@
 <?php
  @session_start();
+ include('settings/db.php');
+ require_once('settings/save.php');
+ require_once('settings/empty_var.php');
  if(isset($_SESSION["name"])){
 ?>
 <!DOCTYPE html>
@@ -29,7 +32,6 @@
         </table>    
 <?php
 //კავშირი
-include('settings/db.php');
 $con = new database();
 
 //ცარიელი ცვლადები
@@ -48,24 +50,16 @@ $password = "";
 $password1 = "";
 
 //შენახვა
-if (isset($_POST['save'])) {
-    $brand = $_POST['brand'];
-    $model = $_POST['model'];
-    $date = $_POST['date'];
-    $color = $_POST['color'];
-    $petrol = $_POST['petrol'];
-    $power = $_POST['power'];
-    $type_id = $con->db->query("INSERT INTO info (`brand`, `model`, `date`) VALUES ('$brand','$model','$date')"); 
-    $info_id = mysqli_insert_id($con->db);
-     $con->db->query("INSERT INTO type (`type_id`, `color`, `petrol`, `power`) VALUES ($info_id,'$color','$petrol','$power')"); 
-    }
+$save = new save();
+$save->saveInfo();
 
-$sql = "SELECT * ,info.id as info_id, type.id as info_type_id  FROM `info` INNER JOIN `type` ON info.id=type.type_id";
-$result =  $con->db->query($sql);
 
-if ($result->num_rows > 0) {
-while($row = $result->fetch_assoc())  
-{ ?> 
+//მონიშვნა
+$result = new emptyvar();
+$result->selectRow();
+if ( count($result->data) > 0) {
+  foreach ($result->data as $row){
+ ?>  
 
 
 <table class="td-list">

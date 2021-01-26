@@ -1,16 +1,15 @@
 <?php
+
 class database {
-    protected $db;
-    function __construct(/* int $int */) {
+    public $db;
+    function __construct() {
         $conn = mysqli_connect("localhost", "root", "", "crud");
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
 
         }
 
-        // $T = $this -> select($conn);
         $this->db = $conn;
-        // return $conn; ar sheudzlia
     }
 }
 ?>

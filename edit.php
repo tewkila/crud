@@ -46,21 +46,21 @@ $type_id = 0;
 $update = false;
 
 //წაშლა
+require_once('settings/delete.php');
+$delete = new delete();
 if (isset($_GET['delete'])) {
-    $id = $_GET['delete'];
-     $con->db->query("DELETE FROM type WHERE id=$id" ) or die($mysqli->error());
-    }
+    $delete->deleteRow();
+   }
 
 // რედაქტირება 
 require_once('settings/redact.php');
 $redct = new redact();
 
-
+//მონიშვნა
 require_once('settings/empty_var.php');
 $result = new emptyvar();
 $result->selectRow();
-// $sql = "SELECT * ,info.id as info_id, type.id as info_type_id  FROM `info` INNER JOIN `type` ON info.id=type.type_id";
-// $result =  $con->db->query($sql);
+
 if ( count($result->data) > 0) {
   foreach ($result->data as $row){
  ?> 

@@ -1,8 +1,9 @@
  <?php
  @session_start();
+ include('settings/db.php');
+ include('settings/sign-up.php');
  
 //კავშრი
-include('settings/db.php');
 $con = new database();
 
 //ცარიელი ცვლადები
@@ -34,37 +35,13 @@ $password1 = "";
 <a href="index.php"><img src="img/arrow_btn.png" alt="arrow" class="arrow_btn"></a>
 </header>
 <body>
-<?php
-if (isset($_POST['sign-up'])) {
-    if($_POST['password'] == $_POST['password1'])
-    {
-    $name = $_POST['name'];
-    $mail = htmlspecialchars($_POST['mail']);
-    $password = md5(htmlspecialchars($_POST['password']));
-    $email =  $con->db->query( "SELECT `mail` FROM `admin` WHERE `mail` = '$mail'");
-        if ($email->num_rows == 0) {
-                $id =  $con->db->query("INSERT INTO admin (`name`, `mail`, `password`) VALUES ('$name','$mail','$password')");
-                $sql = "SELECT `name` FROM `admin` WHERE `mail` = '$mail' AND `password` = '$password'";
-                $result =  $con->db->query($sql); 
-                if (isset($result->num_rows) && $result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) 
-                    {
-                        $_SESSION["name"]  = $row['name'];
-                    }
-                    header ('Location: http://localhost/tekla/new-crud/admin.php');
-                }
-        }
-        else{
-            $emailValidation = true;
-        }
-    }
-    else{
-        $passValidation = true;  
-    }
 
+<?php
+$signup = new signUp();
+if (isset($_POST['sign-up'])) {
+$signup->signUp();
 }
  ?> 
-
 <p class="title-log-in">register</p>
 
 <!--  შესავსები ფორმა -->

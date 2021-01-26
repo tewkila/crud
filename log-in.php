@@ -1,24 +1,11 @@
 <?php
  @session_start();
  include('settings/db.php');
-if(isset($_POST['log-in'])){
-    $con = new database();
-    $email = htmlspecialchars($_POST['mail']);
-    $pass = md5(htmlspecialchars($_POST['password']));
-    $sql = "SELECT `name` FROM `admin` WHERE `mail` = '$email' AND `password` = '$pass'";
-    $result = $con->db->query($sql);
-    if (isset($result->num_rows) && $result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) 
-        {
-            $_SESSION["name"]  = $row['name'];
-        }
-    }
-   
-    if(isset($_SESSION["name"])){
-        header ('Location: http://localhost/tekla/new-crud/admin.php');
-    }
-}
-
+ include('settings/log.php');
+ if(isset($_POST['log-in'])){
+    $login = new log();
+     $login->logIn();
+ }
 ?>
 <!DOCTYPE html>
 <html>

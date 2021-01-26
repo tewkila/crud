@@ -37,8 +37,9 @@
         
 
 <?php
-//კავშირი
 include('settings/db.php');
+require_once('settings/empty_var.php');
+//კავშირი
 $con = new database();
 
 //ცარიელი ცვლადები
@@ -57,11 +58,11 @@ $password = "";
 $password1 = "";
 
 //მონიშვნა
-$sql = "SELECT * ,info.id as info_id, type.id as info_type_id  FROM `info` INNER JOIN `type` ON info.id=type.type_id";
-$result = $con->db->query($sql);
-if ($result->num_rows > 0) {
-while($row = $result->fetch_assoc())  
-{ ?> 
+$result = new emptyvar();
+$result->selectRow();
+if ( count($result->data) > 0) {
+  foreach ($result->data as $row){
+ ?>  
 
 <table class="td-list">
 <tr>  
