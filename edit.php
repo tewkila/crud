@@ -73,7 +73,7 @@ if ( count($result->data) > 0) {
 <td><?php echo $row["color"]; ?></td> 
 <td><?php echo $row["petrol"]; ?></td> 
 <td><?php echo $row["power"]; ?></td>
-<td><button  type="button" class="editt_btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+<td><button  type="button" class="editt_btn edit_btn" data-id="<?php echo $row["id"]; ?>"  data-bs-toggle="modal" data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
 </svg></button></a>
@@ -141,8 +141,34 @@ echo "</table>";
     </div>
   </div>
 </div>
+<p></p>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+  $('.edit_btn').click(function(){
+    let dataid = $(this).attr('data-id')
+      $.ajax('/tekla/new-crud/edit_post.php', {
+      type: 'POST',  // http method
+      data: { myData: dataid},  // data to submit
+      success: function (data, status, xhr) {
+          $('#p').append('status: ' + status + ', data: ' + data);
+          console.log('status: ' + status + ', data: ' + data);
+
+          $(".edit_btn").click(function(){
+  showpopup();
+ });
+      },
+      error: function (jqXhr, textStatus, errorMessage) {
+              $('p').append('Error' + errorMessage);
+      }
+    });
+  });
+
+});
+
+  </script>
 </body>
 </html>
 <?php

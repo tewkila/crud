@@ -49,9 +49,11 @@ $mail = "";
 $password = "";
 $password1 = "";
 
-//შენახვა
+//შენახვ
+if (isset($_POST['save'])) {
 $save = new save();
-$save->saveInfo();
+$save->saveInfo($_POST);
+}
 
 
 //მონიშვნა

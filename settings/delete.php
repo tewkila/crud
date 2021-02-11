@@ -2,7 +2,6 @@
 require_once('db.php');
 
 class delete extends database {
-    public $delete = array();
      function __construct() {
          parent::__construct();
 
