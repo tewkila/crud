@@ -19,8 +19,8 @@ if (isset($_SESSION["name"])) {
     <body>
     <a class="log-out" href="?log-out=1">log-out</a>
     <header>
-        <a href="index.php" class="logo"><h2>carz.</h2></a>
-        <a href="index.php"><img src="assets/img/arrow_btn.png" alt="arrow" class="arrow_btn"></a>
+        <a href="indexExample.php" class="logo"><h2>carz.</h2></a>
+        <a href="indexExample.php"><img src="assets/img/arrow_btn.png" alt="arrow" class="arrow_btn"></a>
     </header>
     <a href="create.php" class="create_btn">
         <div class="base">

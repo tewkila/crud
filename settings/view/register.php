@@ -18,8 +18,8 @@ $con = new database();
     <link rel="stylesheet" href="https://use.typekit.net/kdi6adg.css">
 </head>
 <header>
-    <a href="index.php" class="logo"><h2>carz.</h2></a>
-    <a href="index.php"><img src="assets/img/arrow_btn.png" alt="arrow" class="arrow_btn"></a>
+    <a href="indexExample.php" class="logo"><h2>carz.</h2></a>
+    <a href="indexExample.php"><img src="assets/img/arrow_btn.png" alt="arrow" class="arrow_btn"></a>
 </header>
 <body>
 

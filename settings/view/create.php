@@ -14,7 +14,7 @@ if (isset($_SESSION["name"])) {
     </head>
     <body>
     <header>
-        <a href="index.php" class="logo"><h2>carz.</h2></a>
+        <a href="indexExample.php" class="logo"><h2>carz.</h2></a>
         <a href="admin.php"><img src="assets/img/arrow_btn.png" alt="arrow" class="arrow_btn"></a>
     </header>
         <?php include('./settings/htmls/cars_list.html');

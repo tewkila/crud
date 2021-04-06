@@ -1,5 +1,5 @@
 <?php 
-require_once('db.php');
+require_once('settings/db.php');
 
 class save extends database {
     public $save = array();
