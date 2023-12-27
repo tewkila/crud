@@ -4,9 +4,6 @@
 
 # CRUD project about cars 
 
-<h3 style="font-weight=bold"> About The Project  </h3>
-
-<p> This project was done for personal uses only and is pretty old. It displays data about cars and you are able to make changes in table. </p>
 
 <!-- FEATURES -->
 <h3 style="font-weight=bold"> Features </h3>
